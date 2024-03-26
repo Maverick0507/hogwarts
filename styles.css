@@ -1,0 +1,735 @@
+/* Element Styling */
+body {
+	background: rgba(246, 246, 246, 0.8);
+	font-family: "DM Sans", sans-serif;
+	margin: 0;
+}
+
+section {
+	min-height: 100vh;
+	min-width: 100vw;
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	margin: 0;
+}
+
+h1 {
+	font-family: "DM Serif Text", serif;
+	font-size: 100px;
+	font-weight: lighter;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 30px;
+	margin: 10px auto 20px auto;
+}
+
+a {
+	color: #121212;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	font-size: small;
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+input,
+select {
+	border-radius: 5px;
+	border: none;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+	display: block;
+	height: 35px;
+	margin: 10px auto;
+	padding: 0 10px;
+	font-size: 12px;
+	color: #121212;
+}
+
+input {
+	width: 85%;
+}
+
+select {
+	width: 90%;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+	background-repeat: no-repeat;
+	background-position: right 1rem top 50%;
+	background-size: 0.5rem;
+}
+
+label {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+button {
+	color: #121212;
+	font-family: "DM Sans", sans-serif;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+/* Hero Styling */
+
+.hero-container {
+	align-items: center;
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.257),
+			rgba(255, 255, 255, 0.267)
+		),
+		url(assets/hero-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.hero-nav {
+	display: flex;
+}
+
+.hero-nav button {
+	border-radius: 10px;
+	border: 1px solid #aeaeae;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	background: transparent;
+	backdrop-filter: blur(8px);
+	font-weight: 500;
+	height: 100px;
+	margin: 10px;
+	padding: 10px;
+	transition: all 200ms ease-in-out;
+	width: 100px;
+}
+
+.hero-nav i {
+	display: block;
+	font-size: 28px;
+	margin-bottom: 5px;
+}
+
+.hero-desc {
+	font-size: 14px;
+	margin: 16px;
+	max-width: 100%;
+	width: 580px;
+}
+
+.sticky .hero-nav {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
+	margin-bottom: 8px;
+	justify-content: center;
+}
+
+.sticky .hero-nav button {
+	background: rgba(255, 255, 255, 0.689);
+}
+
+.hero-nav button:hover {
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	transform: scale(1.08);
+	background: #121212;
+}
+
+/* House Toggle Section */
+.house-selection-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.toggle-wrapper {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.house-heading {
+	margin: 15px auto;
+}
+
+.house-heading p {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.expand-houses {
+	border-radius: 10px;
+	border: 1px solid #aeaeae;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	font-weight: 600;
+	margin: 15px auto;
+	padding: 10px 25px;
+}
+
+.expand-houses:hover {
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
+	transform: scale(1.08);
+}
+
+.house-option {
+	animation: house-bg 25s ease-in alternate-reverse infinite;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.257);
+	border-radius: 10px;
+	color: white;
+	filter: grayscale(0.6);
+	margin: 10px;
+	padding: 20px 30px;
+	transition: all 150ms ease-in;
+}
+
+.house-option img {
+	filter: invert(100%) sepia(0%) saturate(7438%) hue-rotate(144deg)
+		brightness(107%) contrast(105%);
+	width: 250px;
+}
+
+.house-option li {
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.6);
+	display: none;
+	margin: 4px 40px;
+	padding: 2px 5px;
+}
+
+.house-option:hover li {
+	display: block;
+}
+
+.house-option:hover {
+	cursor: pointer;
+	filter: grayscale(0);
+	transform: scale(1.05);
+}
+
+#gryffindor-btn img {
+	filter: invert(47%) sepia(8%) saturate(2823%) hue-rotate(311deg)
+		brightness(107%) contrast(95%);
+}
+
+#slytherin-btn img {
+	filter: invert(30%) sepia(63%) saturate(3585%) hue-rotate(154deg)
+		brightness(84%) contrast(85%);
+}
+
+#ravenclaw-btn img {
+	filter: invert(42%) sepia(6%) saturate(5725%) hue-rotate(156deg)
+		brightness(98%) contrast(79%);
+}
+#hufflepuff-btn img {
+	filter: invert(71%) sepia(43%) saturate(507%) hue-rotate(12deg)
+		brightness(97%) contrast(86%);
+}
+
+#gryffindor-btn {
+	background: url(/background/gryffindor.png);
+	background-size: cover;
+}
+
+#slytherin-btn {
+	background: url(/background/slytherin.png);
+	background-size: cover;
+}
+
+#ravenclaw-btn {
+	background: url(/background/ravenclaw.png);
+	background-size: cover;
+}
+
+#hufflepuff-btn {
+	background: url(/background/hufflepuff.png);
+	background-size: cover;
+}
+
+@keyframes house-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* House Cards Expanded */
+.house-content-expanded {
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	color: white;
+	padding: 15px 30px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.house-content-expanded li {
+	border-radius: 20px;
+	display: inline;
+	font-weight: 500;
+	padding: 5px 10px;
+	text-transform: capitalize;
+}
+
+#gryffindor .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(154, 54, 50, 0.8) 0%,
+		rgba(88, 46, 47, 0.9) 100%
+	);
+}
+
+#gryffindor li {
+	background: #6e2427;
+}
+
+#slytherin .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(20, 79, 69, 0.9) 0%,
+		rgba(24, 66, 43, 0.9) 100%
+	);
+}
+
+#slytherin li {
+	background: #0a3122;
+}
+
+#ravenclaw .house-content-expanded {
+	background: linear-gradient(
+		180deg,
+		rgba(36, 65, 105, 0.9) 0%,
+		rgba(21, 36, 59, 0.9) 100%
+	);
+}
+
+#ravenclaw li {
+	background: #121555;
+}
+
+#hufflepuff .house-content-expanded {
+	background: linear-gradient(
+		179.97deg,
+		rgba(149, 101, 26, 0.9) 0.03%,
+		rgba(61, 47, 21, 0.9) 137.15%
+	);
+}
+
+#hufflepuff li {
+	background: #6a5a17;
+}
+
+.house-wrapper {
+	align-items: center;
+	flex-basis: 100%;
+	justify-content: center;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+.house-desc {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+}
+
+.house-desc p {
+	margin-top: 10px;
+	width: 400px;
+}
+
+.house-desc img {
+	width: 350px;
+}
+
+/* Avatars in House Cards Expanded */
+.avatars {
+	text-align: center;
+}
+
+.avatars img {
+	transition: all 200ms ease-in;
+}
+
+.avatars img:hover {
+	transform: scale(1.2);
+}
+
+.raven-alumni,
+.slyth-alumni,
+.gryff-alumni,
+.huffle-alumni {
+	border-radius: 50px;
+	margin: 5px 5px;
+	width: 75px;
+}
+
+.raven-alumni {
+	border: 7px solid #0e136c;
+}
+
+.slyth-alumni {
+	border: 7px solid #0a3122;
+}
+
+.gryff-alumni {
+	border: 7px solid #891b1e;
+}
+
+.huffle-alumni {
+	border: 7px solid #947c19;
+}
+
+/* Course Listing Section */
+.course-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.course-heading {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.course-listing-container {
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
+	gap: 25px;
+}
+
+.course-listing {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	border: 1px solid #aeaeae;
+	border-radius: 10px;
+	background: transparent;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	height: 120px;
+	text-align: center;
+	padding: 5px;
+	transition: all 200ms ease-in;
+	width: 120px;
+}
+
+.course-listing i {
+	display: block;
+	font-size: 26px;
+	margin-bottom: 7px;
+}
+
+.course-listing p {
+	font-size: 12px;
+	display: none;
+	margin: 0;
+}
+
+.course-listing:hover {
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.course-listing:hover p {
+	display: block;
+}
+
+.course-listing:hover span {
+	display: none;
+}
+
+.course-note {
+	color: rgba(0, 0, 0, 0.725);
+	font-size: 14px;
+	margin: 10px auto;
+	width: 80%;
+}
+
+/* Footer Section & Credits */
+
+.footer-container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.footer-container h2 {
+	margin-bottom: 20px;
+}
+
+.credits {
+	font-size: 14px;
+	margin: 40px auto 140px;
+}
+
+.credits a {
+	color: #0e136c;
+}
+
+.credits a:hover {
+	color: rgba(0, 0, 0, 0.65);
+}
+
+/* Footer: Form-Specific */
+.form-container {
+	background: rgba(21, 36, 59, 0.9);
+	border-radius: 8px;
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 24px 50px;
+}
+
+.submission-response {
+	font-weight: 400;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 4px;
+	width: 315px;
+}
+
+#apply-btn,
+#status-check-btn {
+	border-radius: 10px;
+	border: none;
+	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.257);
+	font-weight: 600;
+	margin: 10px;
+	padding: 14px 20px;
+	width: 150px;
+}
+
+#apply-btn {
+	color: rgb(238, 238, 238);
+	background: rgba(149, 101, 26, 0.9);
+}
+
+#status-check-btn {
+	background: rgb(205, 200, 200);
+}
+
+#apply-btn:hover,
+#status-check-btn:hover {
+	animation: color-changes 2s ease-in alternate-reverse infinite;
+	background: #121212;
+	transform: scale(1.08);
+}
+
+/* Hover Animation for Button & Cards */
+@keyframes color-changes {
+	0% {
+		color: #ffd700;
+	}
+	25% {
+		color: #ad9e1a;
+	}
+	50% {
+		color: #4cbc58;
+	}
+	75% {
+		color: #6a9be9;
+	}
+	100% {
+		color: #e03a3a;
+	}
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1300px) {
+	.house-option,
+	.house-option img {
+		width: 180px;
+	}
+}
+
+@media only screen and (max-width: 860px) {
+	.toggle-wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+	}
+
+	.course-listing-container {
+		grid-template-columns: repeat(auto-fit, 120px);
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	h1 {
+		font-size: 72px;
+	}
+	h2 {
+		font-size: medium;
+	}
+	.hero-desc {
+		width: 80%;
+	}
+
+	.course-listing:nth-last-child(2) {
+		grid-column-start: 2;
+		margin: 0 auto;
+	}
+	.course-listing:last-child {
+		grid-column-start: 3;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.house-option,
+	.house-option img {
+		width: 120px;
+	}
+	.house-option {
+		padding: 30px;
+		width: 150px;
+	}
+	.house-option h3 {
+		font-size: 18px;
+	}
+	.house-option li {
+		margin: 6px auto;
+		font-size: 12px;
+	}
+	.house-option i {
+		margin: 0px 2px;
+	}
+	.house-heading p {
+		width: 80%;
+	}
+	.house-wrapper {
+		margin: 0px;
+	}
+	.house-content-expanded {
+		border-radius: 0;
+	}
+	.house-desc {
+		padding: 0;
+	}
+
+	.course-listing:nth-last-child(2) {
+		grid-column-start: 1;
+		grid-row-end: 2;
+	}
+	.course-listing:last-child {
+		grid-column-start: 2;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	h1 {
+		font-size: 52px;
+	}
+
+	input {
+		width: 80%;
+	}
+
+	select {
+		width: 85%;
+	}
+	.hero-nav button {
+		width: 80px;
+		height: 80px;
+	}
+
+	.hero-nav i {
+		font-size: 20px;
+	}
+
+	.house-content-expanded {
+		padding: 10px 6px;
+	}
+
+	.house-content-expanded li {
+		line-height: 34px;
+	}
+
+	.house-desc img {
+		width: 260px;
+	}
+
+	.house-desc p {
+		width: 280px;
+	}
+	.raven-alumni,
+	.slyth-alumni,
+	.gryff-alumni,
+	.huffle-alumni {
+		width: 55px;
+		margin: 0;
+	}
+
+	.submission-response {
+		width: 280px;
+	}
+	#apply-btn,
+	#status-check-btn {
+		margin: 10px 0;
+		width: 86%;
+	}
+
+	.form-container {
+		padding: 20px;
+		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.hero-nav button {
+		width: 80px;
+		height: 80px;
+		font-size: 12px;
+		margin: 2px;
+		padding: 3px;
+	}
+
+	.toggle-wrapper {
+		grid-template-columns: auto;
+	}
+}
