@@ -97,8 +97,9 @@ button:hover {
 	align-items: center;
 	background: linear-gradient(
 			0deg,
-			rgba(255, 255, 255, 0.257),
-			rgba(255, 255, 255, 0.267)
+			rgba(246, 244, 245, 0.909),
+			rgba(15, 6, 6, 0.079)
+			
 		),
 		url(assets/hogwarts-legacy-video-games-dragon-owl-harry-potter-hd-wallpaper-9846ad3860f06c28e07ce1ae58d2244a.jpg);
 	background-repeat: no-repeat;
@@ -108,12 +109,47 @@ button:hover {
 	justify-content: center;
 	text-align: center;
 }
+
+
+.house-selection-container {
+	align-items: center;
+	background: linear-gradient(
+			0deg,
+			rgba(227, 15, 15, 0.257),
+			rgba(237, 229, 229, 0.897)
+		),
+		url();
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.course-container {
+	align-items: center;
+	background: linear-gradient(
+			0deg,
+			rgba(240, 236, 236, 0.257),
+			rgba(225, 13, 13, 0.267)
+		),
+		url();
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+
 .footer-container {
 	align-items: center;
 	background: linear-gradient(
 			0deg,
-			rgba(218, 23, 23, 0.257),
-			rgba(14, 13, 13, 0.267)
+			rgba(109, 221, 163, 0.257),
+			rgba(246, 245, 245, 0.952)
 		),
 		url(assets/b-k-HAl6CKxM3xU-unsplash.jpg);
 	background-repeat: no-repeat;

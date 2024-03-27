@@ -1,13 +1,9 @@
 ## Hogwarts Landing Page
 
-[https://hogwarts.aniqa.dev/](https://hogwarts.aniqa.dev/)
+
 
 🧙🏻‍♀️ A landing page about the fictional institution, Hogwarts, from the Harry Potter series. Utilizes CSS grids, flexbox, animations, form validation, if-else statements based on user inputs, and for loops to enable toggling between different content.
 
-# Preview
-<div align="center">
-<a href="https://hogwarts.aniqa.dev" target="_blank">
-<img src="https://github.com/aniqatc/hogwarts/blob/main/assets/preview.gif?raw=true" style="max-width:100%;"></a></div>
 
 ## Tech
 
