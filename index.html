@@ -27,7 +27,7 @@
 		<meta name="twitter:image:alt" content="Hero section of website" />
 		<title>Hogwarts</title>
 		<link rel="icon" type="image/x-icon" href="assets/favicon.png" />
-		<link href="/styles.css" rel="stylesheet" type="text/css" />
+		<link href="styles.css" rel="stylesheet" type="text/css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -41,10 +41,31 @@
 	</head>
 	<body>
 		
-		<audio autoplay loop>
-			<source src="assets/hedwigs_theme.mp3" type="audio/mpeg">
-			
-		  </audio>
+		
+		<img src="assets/noun-quidditch-3292743.svg" alt="Audio Icon" id="audio-icon" onclick="toggleAudio()">
+		<audio id="audio-player" loop>
+		  <source src="assets/harry_potter_hedwigs.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
+
+		
+		
+		<script>
+		  var audio = document.getElementById("audio-player");
+		
+		  function toggleAudio() {
+			if (audio.paused) {
+			  audio.play();
+			} else {
+			  audio.pause();
+			}
+		  }
+		</script>
+
+	
+
+		 
+		  
 		  
 		<section class="hero-container">
 			<h1>Hogwarts</h1>
@@ -448,6 +469,8 @@
 				>
 			</div>
 		</section>
+
+		
 		<script src="index.js"></script>
 	</body>
 </html>

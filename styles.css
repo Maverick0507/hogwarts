@@ -733,3 +733,34 @@ button:hover {
 		grid-template-columns: auto;
 	}
 }
+
+
+
+
+  #audio-icon {
+    position: absolute;
+    top: 50px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    animation: fly 10s linear infinite;
+  }
+
+  @keyframes fly {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(50%, -50%);
+    }
+    50% {
+      transform: translate(100%, 0);
+    }
+    75% {
+      transform: translate(50%, 50%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
